@@ -8,8 +8,8 @@
 
 
 from random import randint
-n = int(input('Введите количество элементов 1-ого -> '))
-m = int(input('Введите количество элементов 2-ого -> '))
+n = int(input('Введите количество элементов 1-ого множества -> '))
+m = int(input('Введите количество элементов 2-ого множества -> '))
 N = []
 for i in range(n):
     N.append(randint(1, 10))
@@ -23,7 +23,7 @@ for i in N:
     for j in M:
         if i == j and (i not in Dif):
             Dif.append(i)
-# print(Dif)
+print(Dif)
 for i in range(len(Dif)):
     minPos = i
     for j in range(i, len(Dif)):

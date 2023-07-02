@@ -10,28 +10,28 @@
 from random import randint
 n = int(input('Введите количество элементов 1-ого множества -> '))
 m = int(input('Введите количество элементов 2-ого множества -> '))
-N = []
+list_n = []
 for i in range(n):
-    N.append(randint(1, 10))
-print(N)
-M = []
+    list_n.append(randint(1, 10))
+print(list_n)
+list_m = []
 for i in range(m):
-    M.append(randint(1, 10))
-print(M)
-Dif = []
-for i in N:
-    for j in M:
-        if i == j and (i not in Dif):
-            Dif.append(i)
-# print(Dif)
-for i in range(len(Dif)):
+    list_m.append(randint(1, 10))
+print(list_m)
+list_dif = []
+for i in list_n:
+    for j in list_m:
+        if i == j and (i not in list_dif):
+            list_dif.append(i)
+# print(list_dif)
+for i in range(len(list_dif)):
     minPos = i
-    for j in range(i, len(Dif)):
-        if Dif[j] < Dif[minPos]:
+    for j in range(i, len(list_dif)):
+        if list_dif[j] < list_dif[minPos]:
             minPos = j
-    x = Dif[i]
-    Dif[i] = Dif[minPos]
-    Dif[minPos] = x
-print(Dif)
+    x = list_dif[i]
+    list_dif[i] = list_dif[minPos]
+    list_dif[minPos] = x
+print(list_dif)
 
 

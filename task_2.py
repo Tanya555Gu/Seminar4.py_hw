@@ -10,21 +10,21 @@
 
 
 from random import randint
-N = int(input('Введите количество кустов -> '))
-A = []  # урожайность каждого i-ого куста
-for i in range(N):
-    A.append(randint(1, 10))
-print(f'Урожайность каждого куста -> {A}')
-sumMax = A[0] + A[1] + A[2]
-for i in range(len(A)):
-    if i < len(A)-1:
-        sum = A[i-1] + A[i] + A[i+1]
-    elif i == len(A)-1:
-        sum = A[0] + A[i] + A[i - 1] 
+num_of_bushes = int(input('Введите количество кустов -> '))
+list_1 = []  # урожайность каждого i-ого куста
+for i in range(num_of_bushes):
+    list_1.append(randint(1, 10))
+print(f'Урожайность каждого куста -> {list_1}')
+summaMax = list_1[0] + list_1[1] + list_1[2]
+for i in range(len(list_1)):
+    if i < len(list_1)-1:
+        summa = list_1[i-1] + list_1[i] + list_1[i+1]
+    elif i == len(list_1)-1:
+        summa = list_1[0] + list_1[i] + list_1[i - 1] 
     # print(sum)
-    if sum > sumMax:
-        sumMax = sum
-print(f'Максимальное число ягод, которое может собрать за один заход собирающий модуль -> {sumMax}')
+    if summa > summaMax:
+        summaMax = summa
+print(f'Максимальное число ягод, которое может собрать за один заход собирающий модуль -> {summaMax}')
 
 
 
